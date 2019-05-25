@@ -1,21 +1,26 @@
 import React from 'react';
-import logo from './logo.svg';
+import { BrowserRouter as Router, Route, Link } from 'react-router-dom';
+import Home from 'pages/Home';
+import Entry from 'pages/Entry';
+import Barcode from 'pages/Barcode';
+
 import './App.css';
 
 const App: React.FunctionComponent = () => (
-  <div className="App">
-    <header className="App-header">
-      <img src={logo} className="App-logo" alt="logo" />
-      <a
-        className="App-link"
-        href="https://reactjs.org"
-        target="_blank"
-        rel="noopener noreferrer"
-      >
-        Learn React
-      </a>
-    </header>
-  </div>
+  <Router>
+    <div className="app">
+      <header className="header">
+        <Link to="/">Home</Link>
+        <Link to="/entry">Entry</Link>
+        <Link to="/barcode">Barcode</Link>
+      </header>
+      <main className="main">
+        <Route exact path="/" component={Home} />
+        <Route path="/entry" component={Entry} />
+        <Route path="/barcode" component={Barcode} />
+      </main>
+    </div>
+  </Router>
 );
 
 export default App;
