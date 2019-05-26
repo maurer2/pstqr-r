@@ -1,0 +1,45 @@
+@import '~normalize.css';
+
+.wrapper {
+  display: grid;
+  grid-template-rows: auto auto 1fr auto;
+  min-height: 100%;
+}
+
+.header {
+  padding: 0.5rem;
+  color: var(--color-zeta) var(--color-beta);
+}
+
+.header-title {
+  margin: 0;
+  font-size: 1.75rem;
+  color: var(--color-delta);
+}
+
+.nav {
+  display: flex;
+  justify-content: space-evenly;
+  background: var(--color-alpha);
+}
+
+.nav-link {
+  padding: 0.5rem;
+  flex-grow: 1;
+}
+
+.nav-link--is-active {
+  font-weight: bold;
+  background: var(--color-zeta);
+  color: var(--color-alpha);
+}
+
+.main {
+  padding: 0.5rem;
+}
+
+.footer {
+  padding: 0.5rem;
+  color: var(--color-zeta);
+  background: var(--color-delta);
+}
